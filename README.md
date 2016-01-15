@@ -39,6 +39,11 @@ files compiled and copied to the `wwwroot` folder.
 
 You can now explore the app in your favorite browser!
 
+## Building a production release
+By default a debug build is produced by gulp. If you set the ASPNET_ENV enviroment variable 
+to something other than `Development` for example `Production` then Gulp will not produce any
+sourcemaps, thus reducing the size of the javascript files by about 2 megabytes.
+
 ## Development tips
 Manually compiling the sass and typescript files can hold you back so I included
 a watch task in the gulp build. Please use `gulp watch` to use this task.
