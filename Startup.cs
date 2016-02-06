@@ -32,9 +32,11 @@ namespace Frontend
 
             // By default we map everything to the index action
             // except for files that do exist on disk.
+            app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
+                routes.MapRoute("ApiRoute", "api/{controller}/{id?}");
                 routes.MapRoute("DefaultRoute", "{*path}", new { controller = "Home", action = "Index" });
             });
         }

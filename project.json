@@ -14,12 +14,13 @@
     "web": "Microsoft.AspNet.Server.Kestrel"
   },
   "exclude": [
-      "wwwroot",
-      "node_modules",
-      "Scripts",
-      "Stylesheets"
+    "wwwroot",
+    "node_modules",
+    "Scripts",
+    "Stylesheets"
   ],
   "scripts": {
-    "postbuild": "gulp build"
+    "postbuild": "gulp build",
+    "postrestore": "tsd install; npm install" 
   }
 }
